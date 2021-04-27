@@ -4,6 +4,7 @@
   "description": "NodeJS backend script for positiv app",
   "main": "server.js",
   "dependencies": {
+    "node": "13.13.0",
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "node-html-parser": "^3.2.0",
