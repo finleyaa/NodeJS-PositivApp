@@ -30,7 +30,7 @@ app.get("/articles", (req, res) => {
 });
 
 app.get("/logo", (req, res) => {
-    res.sendFile("./logo.png");
+    res.sendFile(`${__dirname}/logo.png`);
 })
 
 app.listen(PORT, () => console.log("Listening on port " + PORT));
