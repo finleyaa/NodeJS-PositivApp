@@ -1,0 +1,244 @@
+{
+  "articles": [
+    {
+      "source": "The Guardian",
+      "author": "Guardian staff reporter",
+      "title": "Q&A: Covid vaccines offered to people 42 and over in England – what happens next? - The Guardian",
+      "description": "Younger people invited to get jab at more than 1,600 sites across country",
+      "url": "https://amp.theguardian.com/world/2021/apr/27/qa-covid-vaccines-offered-to-people-42-and-over-in-england-what-happens-next",
+      "image": null,
+      "date": "2021-04-27T10:28:00Z",
+      "sentiment": 6
+    },
+    {
+      "source": "Football365.com",
+      "author": "Editor F365",
+      "title": "Chelsea condemned to Europa Conference League by 'boffins' - Football365",
+      "description": "Sorry Chelsea, but you are bound for the Europa Conference League. The supercomputer says so. Liverpool will take your Champions League spot.",
+      "url": "https://www.football365.com/news/chelsea-condemned-conference-boffins-mediawatch",
+      "image": "https://d2x51gyc4ptf2q.cloudfront.net/content/uploads/2021/04/27115720/Thomas-Tuchel-manager.jpg",
+      "date": "2021-04-27T10:59:17Z",
+      "sentiment": 14
+    },
+    {
+      "source": "Mirror Online",
+      "author": "Lily Waddell",
+      "title": "Reclusive Adele looks stunning as she breaks cover at Oscars afterparty - Mirror Online",
+      "description": "Glamorous photographs emerged on social media of Adele, who has lost seven stone, enjoying a night out with Hollywood's hottest stars",
+      "url": "https://www.mirror.co.uk/3am/celebrity-news/skinny-adele-looks-stunning-breaks-23989677",
+      "image": "https://i2-prod.mirror.co.uk/incoming/article23989999.ece/ALTERNATES/s1200/1_Screen-Shot-2021-04-27-at-090057.jpg",
+      "date": "2021-04-27T10:44:38Z",
+      "sentiment": 9
+    },
+    {
+      "source": "The Guardian",
+      "author": "Guardian staff reporter",
+      "title": "Julian Nagelsmann leaving RB Leipzig to become Bayern Munich manager - The Guardian",
+      "description": "Julian Nagelsmann is to take over at Bayern Munich from 1 July in a deal that will bring RB Leipzig compensation of up to €25m (£21.7m)",
+      "url": "https://amp.theguardian.com/football/2021/apr/27/julian-nagelsmann-leaving-rb-leipzig-to-become-bayern-munich-manager",
+      "image": null,
+      "date": "2021-04-27T09:31:00Z",
+      "sentiment": 4
+    },
+    {
+      "source": "Sky.com",
+      "author": "John-Paul Ford Rojas",
+      "title": "COVID-19: Jet2 says holidaymakers are leaving bookings until the last minute - Sky News",
+      "description": "The travel operator says people were leaving reservations until \"significantly closer to departure\" for the peak season this year.",
+      "url": "https://news.sky.com/story/covid-19-holidaymakers-leaving-bookings-until-the-last-minute-says-travel-operator-jet2-12288370",
+      "image": "https://e3.365dm.com/20/03/1600x900/skynews-jet2-palma-spain_4947371.jpg?20200314113141",
+      "date": "2021-04-27T10:04:12Z",
+      "sentiment": 4
+    },
+    {
+      "source": "The Guardian",
+      "author": "Catherine Shoard",
+      "title": "Chadwick Boseman’s family defends Anthony Hopkins amid best actor Oscars backlash - The Guardian",
+      "description": "Brother of the late actor congratulates the 83-year-old, as Academy criticised for not allowing Hopkins to make his acceptance speech on Zoom",
+      "url": "https://amp.theguardian.com/film/2021/apr/27/chadwick-bosemans-family-defends-anthony-hopkins-amid-best-actor-oscars-backlash",
+      "image": null,
+      "date": "2021-04-27T10:59:00Z",
+      "sentiment": 6
+    },
+    {
+      "source": "Manchester Evening News",
+      "author": "Joe Bray",
+      "title": "Man City add new player to Champions League squad ahead of PSG trip - Manchester Evening News",
+      "description": "Manchester City have called up a new youngster to their Champions League 'B List' squad ahead of their semi-final first leg vs PSG.",
+      "url": "https://www.manchestereveningnews.co.uk/sport/football/football-news/man-city-squad-kwaku-oduroh-20474127",
+      "image": "https://i2-prod.manchestereveningnews.co.uk/incoming/article20474146.ece/ALTERNATES/s1200/0_GettyImages-1306734012.jpg",
+      "date": "2021-04-27T10:14:46Z",
+      "sentiment": 4
+    },
+    {
+      "source": "BBC News",
+      "author": "https://www.facebook.com/bbcnews",
+      "title": "Crawley College: Police thank public for tackling gun suspect - BBC News",
+      "description": "Crawley College remains closed today after reports of gunshots saw a man arrested on Monday.",
+      "url": "https://www.bbc.co.uk/news/uk-england-sussex-56898742",
+      "image": "https://ichef.bbci.co.uk/news/1024/branded_news/276B/production/_118219001_crawleyfirearmsjob-1.jpg",
+      "date": "2021-04-27T08:46:48Z",
+      "sentiment": 3
+    },
+    {
+      "source": "Telegraph.co.uk",
+      "author": "By\nTelegraph Reporters",
+      "title": "Pink supermoon lights up dawn skies - The Telegraph",
+      "description": "The April full moon - named after pink flowers which bloom in the springtime - appeared around 14 per cent bigger and 30 per cent brighter",
+      "url": "https://www.telegraph.co.uk/news/2021/04/27/pink-supermoon-lights-dawn-skies/",
+      "image": "https://img.youtube.com/vi/hGBjkHg_P70/maxresdefault.jpg",
+      "date": "2021-04-27T08:57:00Z",
+      "sentiment": 10
+    },
+    {
+      "source": "Mirror Online",
+      "author": "Ella Pickover, Jonathan Coles",
+      "title": "Coronavirus vaccines offered to people aged 42 and over in England today - Mirror Online",
+      "description": "The NHS system only opened to those aged 44 and over on Monday but has been extended for the second time in two days to allow more adults in their 40s to book their jab",
+      "url": "https://www.mirror.co.uk/news/uk-news/breaking-coronavirus-vaccines-offered-people-23988648",
+      "image": "https://i2-prod.mirror.co.uk/incoming/article23988966.ece/ALTERNATES/s1200/1_Moderna-Covid-19-Vaccine-Administered-At-The-Madejski-Stadium-In-Reading.jpg",
+      "date": "2021-04-27T08:22:42Z",
+      "sentiment": 5
+    },
+    {
+      "source": "TechRadar",
+      "author": "Samuel Roberts",
+      "title": "Game of Thrones spin-off House of the Dragon begins production – first photo released - TechRadar",
+      "description": "The series is set for 2022",
+      "url": "https://www.techradar.com/news/game-of-thrones-spin-off-house-of-the-dragon-begins-production-first-photo-released",
+      "image": "https://cdn.mos.cms.futurecdn.net/DJ9gGijUjiosKyHr4ysLbX-1200-80.jpg",
+      "date": "2021-04-27T09:27:51Z",
+      "sentiment": 5
+    },
+    {
+      "source": "Engadget",
+      "author": "https://www.engadget.com/about/editors/steve-dent",
+      "title": "Apple's next-gen 'M2' Mac processor has reportedly gone into production - Engadget",
+      "description": "Apple's successor to its M1 Apple Silicon chip could arrive in MacBook computers by the second half of this year, according to a report from Nikkei..",
+      "url": "https://www.engadget.com/apple-m2-mac-processor-production-103824807.html",
+      "image": "https://s.yimg.com/os/creatr-uploaded-images/2021-04/ece10110-a73b-11eb-aebb-03d6b27fefac",
+      "date": "2021-04-27T10:40:02Z",
+      "sentiment": 4
+    },
+    {
+      "source": "The Guardian",
+      "author": "Graeme Wearden, Jillian Ambrose",
+      "title": "HSBC and BP profits jump; flexible working demand surges – business live - The Guardian",
+      "description": "Rolling coverage of the latest economic and financial news",
+      "url": "https://www.theguardian.com/business/live/2021/apr/27/hsbc-bp-profits-jump-economic-outlook-uk-retail-stock-markets-ftse-business-live",
+      "image": "https://i.guim.co.uk/img/media/9f1561ec198196e3e71a776da997586b38daa78a/0_0_7862_4720/master/7862.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctbGl2ZS5wbmc&enable=upscale&s=3ebfc1d61b81797c48762a0bcc42bf00",
+      "date": "2021-04-27T08:35:38Z",
+      "sentiment": 7
+    },
+    {
+      "source": "Daily Mail",
+      "author": "Connor Boyd Assistant",
+      "title": "People aged 42 and over are now eligible for a Covid vaccine in England - Daily Mail",
+      "description": "From today in England, everyone over the age of 42 - or those who have their 42nd birthday before July 1 - will be invited to come forward for their jab. Mr Hancock said he was excited to get his vaccine.",
+      "url": "https://www.dailymail.co.uk/news/article-9511683/People-aged-42-eligible-Covid-vaccine-England.html",
+      "image": "https://i.dailymail.co.uk/1s/2021/04/27/09/42268442-0-image-a-2_1619512507731.jpg",
+      "date": "2021-04-27T08:13:27Z",
+      "sentiment": 3
+    },
+    {
+      "source": "Sky.com",
+      "author": "Sky",
+      "title": "COVID-19: Coronavirus vaccines now being offered to people aged 42 and over in England - Sky News",
+      "description": "It is the second time this week the vaccine booking system has been extended to more people in their forties.",
+      "url": "https://news.sky.com/story/covid-19-coronavirus-vaccines-now-being-offered-to-people-aged-42-and-over-in-england-12288252",
+      "image": "https://e3.365dm.com/21/04/1600x900/2372104130315043407_5340541.jpg?20210413083634",
+      "date": "2021-04-27T08:15:00Z",
+      "sentiment": 4
+    },
+    {
+      "source": "Sky.com",
+      "author": "Sky",
+      "title": "Moving video shows crew of sunken Indonesian submarine singing farewell song - Sky News",
+      "description": "All 53 crew members died when the KRI Nanggala submarine 402 broke apart off the northern coast of Bali last week.",
+      "url": "https://news.sky.com/story/moving-video-shows-crew-of-sunken-indonesian-submarine-singing-farewell-song-12288288",
+      "image": "https://e3.365dm.com/21/04/1600x900/skynews-indonesia-submarine_5350907.jpg?20210421145628",
+      "date": "2021-04-27T10:30:45Z",
+      "sentiment": 6
+    },
+    {
+      "source": "Manchester Evening News",
+      "author": "Joe Bray",
+      "title": "Every word from Man City and PSG press conferences as Guardiola and Pochettino give Champions League team news - Manchester Evening News",
+      "description": "Pep Guardiola, Mauricio Pochettino and Neymar previewed Manchester City's Champions League semi-final first leg with Paris Saint-Germain.",
+      "url": "https://www.manchestereveningnews.co.uk/sport/football/football-news/man-city-psg-guardiola-neymar-20474438",
+      "image": "https://i2-prod.manchestereveningnews.co.uk/sport/football/article18360598.ece/ALTERNATES/s1200/0_Guardiola.jpg",
+      "date": "2021-04-27T14:02:00Z",
+      "sentiment": 57
+    },
+    {
+      "source": "Telegraph.co.uk",
+      "author": "Ambrose Evans-Pritchard",
+      "title": "Europe is frighteningly close to another Covid blunder - Telegraph.co.uk",
+      "description": "Read this exclusive extract from our Economic Intelligence newsletter and sign up at the bottom of the article to get it every Tuesday",
+      "url": "https://www.telegraph.co.uk/business/2021/04/27/europe-frighteningly-close-another-covid-blunder/",
+      "image": "https://www.telegraph.co.uk/content/dam/business/2021/04/27/unnamed_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?impolicy=logo-overlay",
+      "date": "2021-04-27T12:00:00Z",
+      "sentiment": 4
+    },
+    {
+      "source": "Sky.com",
+      "author": "Charlotte Bateman, news reporter",
+      "title": "Rare pink supermoon set to reappear - here's when to keep an eye out for it - Sky News",
+      "description": "The moon is captured in stunning photos from around the world and will appear about 14% bigger and 30% brighter tonight.",
+      "url": "https://news.sky.com/story/rare-pink-supermoon-lights-up-dawn-sky-and-is-set-to-reappear-even-bigger-and-brighter-tonight-12288436",
+      "image": "https://e3.365dm.com/21/04/1600x900/skynews-stonehenge-full-moon_5357311.jpg?20210427074136",
+      "date": "2021-04-27T13:16:08Z",
+      "sentiment": 5
+    },
+    {
+      "source": "Daily Record",
+      "author": "Chris McCall",
+      "title": "Scots fed up of 'freaky nationalist arguments' over independence, claims party leader - Daily Record",
+      "description": "Willie Rennie has said his party would put recovery from the pandemic ahead of arguments over the constitution.",
+      "url": "https://www.dailyrecord.co.uk/news/politics/scots-fed-up-freaky-nationalist-23989531",
+      "image": "https://i2-prod.dailyrecord.co.uk/incoming/article23211951.ece/ALTERNATES/s1200/1_JS197511256.jpg",
+      "date": "2021-04-27T09:49:17Z",
+      "sentiment": 4
+    },
+    {
+      "source": "BBC News",
+      "author": "https://www.facebook.com/bbcnews",
+      "title": "Game of Thrones: House Of The Dragon production begins with cast table read - BBC News",
+      "description": "House Of The Dragon, due for release in 2022, will tell the backstory of the Targaryen family.",
+      "url": "https://www.bbc.co.uk/news/entertainment-arts-56900795",
+      "image": "https://ichef.bbci.co.uk/news/1024/branded_news/173B0/production/_118225159_houseofcomp.jpg",
+      "date": "2021-04-27T12:00:13Z",
+      "sentiment": 3
+    },
+    {
+      "source": "The Guardian",
+      "author": "Aubrey Allegretti",
+      "title": "Q&A: PM’s flat renovations – what are the issues at the heart of Tory sleaze row? - The Guardian",
+      "description": "Boris Johnson’s No 11 makeover is reported to have cost £200,000 but it is still not clear where the money came from",
+      "url": "https://amp.theguardian.com/politics/2021/apr/27/qa-pms-flat-renovations-what-are-the-issues-at-the-heart-of-tory-sleaze-row",
+      "image": "https://i.guim.co.uk/img/media/8ab5cc390a1189186e48deaad331285c088d5bf5/0_0_4000_2401/master/4000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=420d5dfd5931706ecac670cc99262e63",
+      "date": "2021-04-27T13:06:00Z",
+      "sentiment": 4
+    },
+    {
+      "source": "The Verge",
+      "author": "Sam Byford",
+      "title": "Amazon’s new Fire HD 10 tablet has slimmer bezels and better specs - The Verge",
+      "description": "Amazon has overhauled its Fire tablet lineup with updated 10-inch models and a new Kids Pro range. All of the new products start shipping on May 26th.",
+      "url": "https://www.theverge.com/2021/4/27/22405230/amazon-fire-hd-10-2021-announced-kids-pro",
+      "image": "https://cdn.vox-cdn.com/thumbor/nHBtkzguihGhge53xrEHC1McqB0=/0x215:3000x1786/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22472652/Fire_HD_10_Lifestyle_5.jpg",
+      "date": "2021-04-27T13:00:00Z",
+      "sentiment": 3
+    },
+    {
+      "source": "Motorsport.com",
+      "author": "Jonathan Noble",
+      "title": "F1 unlikely to roll out sprint races at every grand prix - Motorsport.com, Edition: Global",
+      "description": "Formula 1 chiefs says they will likely restrict the number of sprint races to select ‘Grand Slam’ events in the future if trials are successful this year.",
+      "url": "https://www.motorsport.com/f1/news/sprint-races-plan-full-season-unlikely-brawn/6486788/",
+      "image": "https://cdn-1.motorsport.com/images/amp/01WRgK5Y/s6/lando-norris-mclaren-mcl35m-da.jpg",
+      "date": "2021-04-27T08:48:17Z",
+      "sentiment": 4
+    }
+  ]
+}
