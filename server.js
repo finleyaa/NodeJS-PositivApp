@@ -29,4 +29,8 @@ app.get("/articles", (req, res) => {
     res.json(returnJson);
 });
 
+app.get("/logo", (req, res) => {
+    res.sendFile("./logo.png");
+})
+
 app.listen(PORT, () => console.log("Listening on port " + PORT));
