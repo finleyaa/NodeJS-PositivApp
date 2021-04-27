@@ -33,7 +33,7 @@ class SentimentAnalysis {
             console.log("Got articles from newsapi.org");
             this.analyseArticles(articles, opinionWords);
         });
-        fs.writeFileSync(`${__dirname}/last_sent_time.txt`, Date.now() / 1000);
+        fs.writeFileSync(`${__dirname}/last_sent_time.txt`, (Date.now() / 1000).toString());
         return true;
     }
 
