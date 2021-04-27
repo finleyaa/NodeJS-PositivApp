@@ -10,17 +10,13 @@ class AccountManager {
         var users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, "utf8"));
 
         if (!username in users) { return false }
-        bcrypt.compareSync(password, users[username], function(err, res) {
-            if (res == true) {
-                return true;
-            }
-            return false;
-        })
+        return bcrypt.compareSync(password, users[username].password);
     }
 
     createAccount(username, email, password, categories) {
-        if (!fs.existsSync(`${__dirname}/users.json`)) {
-            var users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, "utf8"));
+        var users = {};
+        if (fs.existsSync(`${__dirname}/users.json`)) {
+            users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, "utf8"));
             if (username in users) { return false } // cannot have same username as another account
         }
 
