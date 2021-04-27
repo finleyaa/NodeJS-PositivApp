@@ -10,7 +10,12 @@ class AccountManager {
         var users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, "utf8"));
 
         if (!username in users) { return false }
-        return bcrypt.compareSync(password, users[username].password);
+        var comparison = bcrypt.compareSync(password, users[username].password);
+        if (comparison) {
+            return users[username].categories;
+        } else {
+            return false;
+        }
     }
 
     createAccount(username, email, password, categories) {
