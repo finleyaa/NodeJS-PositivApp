@@ -37,19 +37,27 @@ app.get("/account/:command", (req, res) => {
 
     if (req.params.command == "login") {
         if (req.query.hasOwnProperty("username") && req.query.hasOwnProperty("password")) {
-            result = accountManager.login(req.query.username, req.query.password);
-            if (!result) {
-                returnJson = {status: "200", body: {result: result}};
+            if (req.query.username == "" || req.query.password == "") {
+                returnJson = {status: "400", body: {error: "Bad request (username and password required)"}};
             } else {
-                returnJson = {status: "200", body: {result: true, categories: result}};
+                result = accountManager.login(req.query.username, req.query.password);
+                if (!result) {
+                    returnJson = {status: "200", body: {result: result}};
+                } else {
+                    returnJson = {status: "200", body: {result: true, categories: result}};
+                }
             }
         } else {
             returnJson = {status: "400", body: {error: "Bad request (username and password required)"}};
         }
     } else if (req.params.command == "create") {
         if (req.query.hasOwnProperty("username") && req.query.hasOwnProperty("email") && req.query.hasOwnProperty("password") && req.query.hasOwnProperty("categories")) {
-            result = accountManager.createAccount(req.query.username, req.query.email, req.query.password, req.query.categories);
-            returnJson = {status: "200", body: {result: result.toString()}};
+            if (req.query.username == "" || req.query.password == "" || req.query.email == "" || req.query.categories == "") {
+                returnJson = {status: "400", body: {error: "Bad request (username and password required)"}};
+            } else {
+                result = accountManager.createAccount(req.query.username, req.query.email, req.query.password, req.query.categories);
+                returnJson = {status: "200", body: {result: result}};
+            }
         } else {
             returnJson = {status: "400", body: {error: "Bad request (username, password, email and categories required)"}};
         }

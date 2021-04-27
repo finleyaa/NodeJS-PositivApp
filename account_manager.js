@@ -9,7 +9,7 @@ class AccountManager {
 
         var users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, "utf8"));
 
-        if (!username in users) { return false }
+        if (!users.hasOwnProperty(username)) { return false }
         var comparison = bcrypt.compareSync(password, users[username].password);
         if (comparison) {
             return users[username].categories;
