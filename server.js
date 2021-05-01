@@ -20,7 +20,7 @@ app.get("/articles", (req, res) => {
         var articleAmount = count;
         if (articlesJson.articles.length < count) { articleAmount = articlesJson.articles.length }
         
-        for (var x = 0; x < articleAmount; x++) {
+        for (var x = articlesJson.articles.length; x > articlesJson.articles.length - articleAmount; x--) {
             returnJson.body.articles.push(articlesJson.articles[x]);
         }
     } else {
