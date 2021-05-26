@@ -6,13 +6,13 @@ var dataAdjLines = dataAdjRaw.split("\n");
 
 var dataAdj = {};
 
-dataAdjLines.splice(0, 29);
+dataAdjLines.splice(0, 29); // remove unnecessary info
 
-dataAdjLines.forEach(function(line) {
+dataAdjLines.forEach(function(line) { // loop through each line
     let tempSplitArray = line.split(" ");
     let adjObject = {words: [], synonyms: [], antonyms: []};
 
-    let wordAmountInSet = parseInt(tempSplitArray[3], 16);
+    let wordAmountInSet = parseInt(tempSplitArray[3], 16); // find how many words in the set
 
     let startCounter = 4;
     let endCounter = startCounter + ((wordAmountInSet - 1) * 2)
@@ -22,7 +22,7 @@ dataAdjLines.forEach(function(line) {
             if (word.includes("(")) {
                 word = word.substr(0, word.length - 3);
             }
-            adjObject.words.push(word);
+            adjObject.words.push(word); // extract all the individual words in the set
         }
     } else {
         adjObject.words.push(tempSplitArray[startCounter]);
@@ -36,9 +36,9 @@ dataAdjLines.forEach(function(line) {
         let pointer = tempSplitArray[x];
         let linkId = tempSplitArray[x + 1];
         if (pointer == "&") {
-            adjObject.synonyms.push(linkId);
+            adjObject.synonyms.push(linkId); // attach synonym links
         } else if (pointer == "!") {
-            adjObject.antonyms.push(linkId);
+            adjObject.antonyms.push(linkId); // attach antonym links
         }
     }
 
@@ -46,7 +46,7 @@ dataAdjLines.forEach(function(line) {
     dataAdj[tempSplitArray[0]] = adjObject;
 })
 
-var originalAdjSet = fs.readFileSync(`${__dirname}/original_adj_set.csv`, "utf8").split("\n");
+var originalAdjSet = fs.readFileSync(`${__dirname}/original_adj_set.csv`, "utf8").split("\n"); // load original scored adjectives
 var originalOpinionWords = {};
 
 var opinionWords = [];
@@ -57,11 +57,10 @@ originalAdjSet.forEach(function(line) {
     originalOpinionWords[splitLine[0]] = tempObject;
 })
 
-//var fileWriter = fs.createWriteStream("opinion_word_list.csv", {flags: "a"});
 var completedIds = [];
 
 Object.keys(originalOpinionWords).forEach(function(id) {
-    recursiveWordSearch(id, originalOpinionWords[id].rating);
+    recursiveWordSearch(id, originalOpinionWords[id].rating); // begin recursive search to calculate word sentiments
 })
 
 function recursiveWordSearch(id, sentiment) {
@@ -71,22 +70,14 @@ function recursiveWordSearch(id, sentiment) {
     completedIds.push(id);
     let words = dataAdj[id].words;
     words.forEach(function(w) {
-        fs.appendFileSync(`${__dirname}/opinion_word_list.csv`, w + "," + sentiment + "\n");
+        fs.appendFileSync(`${__dirname}/opinion_word_list.csv`, w + "," + sentiment + "\n"); // add current word to the opinion word list
     });
     let synonyms = dataAdj[id].synonyms;
     let antonyms = dataAdj[id].antonyms;
     synonyms.forEach(function(sId) {
-        recursiveWordSearch(sId, sentiment);
+        recursiveWordSearch(sId, sentiment); // do the same for all synonyms with the same sentiment
     });
     antonyms.forEach(function(aId) {
-        recursiveWordSearch(aId, -sentiment);
+        recursiveWordSearch(aId, -sentiment); // do the same for all antonyms with opposite sentiment
     });
 }
-
-// var fileWriter = fs.createWriteStream("opinion_word_list.csv", {flags: "a"});
-
-// opinionWords.forEach(function(item) {
-//     fileWriter.write(item.word + "," + item.rating + "\n");
-// });
-
-// fileWriter.close();

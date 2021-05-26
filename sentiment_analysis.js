@@ -16,24 +16,24 @@ const APIURL = "https://newsapi.org/v2/top-headlines?country=gb&apiKey=" + APIKE
 
 class SentimentAnalysis {
 
-    start() {
-        if (fs.existsSync(`${__dirname}/last_sent_time.txt`)) {
+    start() { // begins the whole sentiment analysis process
+        if (fs.existsSync(`${__dirname}/last_sent_time.txt`)) { // check when we last ran sentiment analysis
             var lastTimeRan = fs.readFileSync(`${__dirname}/last_sent_time.txt`, "utf8");
-            if ((Date.now() / 1000) - parseInt(lastTimeRan) < 3600) {
+            if ((Date.now() / 1000) - parseInt(lastTimeRan) < 3600) { // if it was less than 1 hour ago, cancel the process and return false
                 return false;
             }
         }
         // "word": rating
-        var opinionWords = this.loadOpinionWords(`${__dirname}/opinion_word_list.csv`);
+        var opinionWords = this.loadOpinionWords(`${__dirname}/opinion_word_list.csv`); // load in the opinion word list
         var articles;
 
-        request(APIURL, {json: true}, (err, res, body) => {
+        request(APIURL, {json: true}, (err, res, body) => { // request the articles from the external API
             if (err) {return console.log(err);}
             articles = body.articles;
             console.log("Got articles from newsapi.org");
-            this.analyseArticles(articles, opinionWords);
+            this.analyseArticles(articles, opinionWords); // begin article analysis
         });
-        fs.writeFileSync(`${__dirname}/last_sent_time.txt`, (Date.now() / 1000).toString());
+        fs.writeFileSync(`${__dirname}/last_sent_time.txt`, (Date.now() / 1000).toString()); // update the time
         return true;
     }
 
@@ -52,27 +52,29 @@ class SentimentAnalysis {
         return opinionWords;
     }
 
+    // Analyse the articles using the opinion word list
     analyseArticles(articles, opinionWords) {
         articles.forEach((a) => {
-            if (a.url == null) {
+            if (a.url == null) { // if there is no web link, return
                 return;
             }
-            request(a.url, (err, res, body) => {
+            request(a.url, (err, res, body) => { // send a request to the web link
                 var articleText = "";
                 var root = HTMLParser.parse(body);
-                var pElements = root.querySelectorAll("p");
+                var pElements = root.querySelectorAll("p"); // get all text contained within <p></p> tags
                 pElements.forEach(function(p) {
                     articleText += p.innerText;
                 });
-                var sentiment = this.analyseText(articleText, opinionWords);
+                var sentiment = this.analyseText(articleText, opinionWords); // analyse the text
                 console.log(sentiment);
                 if (sentiment > 2) {
-                    this.saveArticle(a, sentiment);
+                    this.saveArticle(a, sentiment); // save the article along with it's sentiment
                 }
             });
         });
     }
 
+    // Analyse text
     analyseText(text, opinionWords) {
         var sentiment = 0;
         // clean the text
@@ -81,21 +83,22 @@ class SentimentAnalysis {
 
         // calculate sentiment
         var splitText = text.split(" ");
-        splitText.forEach(function(w) {
+        splitText.forEach(function(w) { // find each word in the text and search for it in the opinion word list
             if (w in opinionWords) {
-                sentiment += opinionWords[w];
+                sentiment += opinionWords[w]; // add the assigned sentiment for the word to the total text sentiment
             }
         });
         return sentiment;
     }
 
+    // Save an articles to the json file
     saveArticle(article, sentiment) {
         const articleDatabase = `${__dirname}/articles.json`;
         var articleJson;
         var rawText = "";
 
         if (fs.existsSync(articleDatabase)) {
-            rawText = fs.readFileSync(articleDatabase);
+            rawText = fs.readFileSync(articleDatabase); // read in the existing json
         }
 
         if (rawText.length > 0) {
@@ -108,7 +111,7 @@ class SentimentAnalysis {
 
         articleJson.articles.forEach(function(data) {
             if (data.url == article.url) {
-                alreadyInJson = true;
+                alreadyInJson = true; // if the article is already in the json then skip it
             }
         });
         
@@ -116,7 +119,7 @@ class SentimentAnalysis {
             return;
         }
 
-        var newArticleInfo = {
+        var newArticleInfo = { // format the json for the article
             source: article.source.name,
             author: article.author,
             title: article.title,
@@ -127,10 +130,10 @@ class SentimentAnalysis {
             sentiment: sentiment
         };
 
-        articleJson.articles.push(newArticleInfo);
+        articleJson.articles.push(newArticleInfo); // add it to the json file
 
         var toWrite = JSON.stringify(articleJson, null, 2);
-        fs.writeFileSync(articleDatabase, toWrite);
+        fs.writeFileSync(articleDatabase, toWrite); // write back to the file
 
     }
 
